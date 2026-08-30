@@ -11,7 +11,7 @@ export const siteConfig = {
   social: {
     instagram: "https://www.instagram.com/rehmataitech/",
     facebook: "https://facebook.com/rehmat",
-    twitter: "https://twitter.com/rehmat",
+    twitter: "https://x.com/rehmatai",
   },
   nav: [
     { label: "Home", href: "/" },
