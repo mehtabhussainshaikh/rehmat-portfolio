@@ -83,7 +83,7 @@ export default function Home() {
           {engagementSteps.map((step) => (
             <div
               key={step.title}
-              className="p-7 first:pt-0 last:pb-0 md:first:pl-0 md:last:pr-0"
+              className="p-7 max-md:first:pt-0 max-md:last:pb-0 md:first:pl-0 md:last:pr-0"
             >
               <span className="text-xs font-semibold uppercase tracking-[2px] text-emerald-2">
                 {step.label}
