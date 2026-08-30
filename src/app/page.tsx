@@ -95,9 +95,12 @@ export default function Home() {
         <h2 className="heading-2 mt-4 max-w-[700px] text-ink">
           You see working software before you see a big invoice.
         </h2>
-        <div className="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 flex flex-col divide-y divide-border-on-paper md:grid md:grid-cols-4 md:divide-x md:divide-y-0">
           {engagementSteps.map((step) => (
-            <div key={step.title}>
+            <div
+              key={step.title}
+              className="p-7 first:pt-0 last:pb-0 md:first:pl-0 md:last:pr-0"
+            >
               <span className="text-xs font-semibold uppercase tracking-[2px] text-emerald-2">
                 {step.label}
               </span>
