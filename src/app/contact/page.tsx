@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import { PageTitle } from "@/components/PageTitle";
 import { SectionContainer } from "@/components/ui/SectionContainer";
 import { InquiryForm } from "@/components/InquiryForm";
-import { LinkedinIcon, GithubIcon, TwitterIcon } from "@/components/icons";
+import { LinkedinIcon, InstagramIcon, FacebookIcon, TwitterIcon } from "@/components/icons";
 import { siteConfig } from "@/data/site-config";
 
 export const metadata: Metadata = {
@@ -58,11 +58,18 @@ export default function ContactPage() {
                   <LinkedinIcon width={22} height={22} />
                 </a>
                 <a
-                  href={siteConfig.social.github}
-                  aria-label="GitHub"
+                  href={siteConfig.social.instagram}
+                  aria-label="Instagram"
                   className="text-text-ink-secondary transition-premium hover:text-ink"
                 >
-                  <GithubIcon width={22} height={22} />
+                  <InstagramIcon width={22} height={22} />
+                </a>
+                <a
+                  href={siteConfig.social.facebook}
+                  aria-label="Facebook"
+                  className="text-text-ink-secondary transition-premium hover:text-ink"
+                >
+                  <FacebookIcon width={22} height={22} />
                 </a>
                 <a
                   href={siteConfig.social.twitter}

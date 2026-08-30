@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LinkedinIcon, GithubIcon, TwitterIcon } from "@/components/icons";
+import { LinkedinIcon, InstagramIcon, FacebookIcon, TwitterIcon } from "@/components/icons";
 import { siteConfig } from "@/data/site-config";
 
 export function Footer() {
@@ -31,11 +31,18 @@ export function Footer() {
                 <LinkedinIcon width={20} height={20} />
               </a>
               <a
-                href={siteConfig.social.github}
-                aria-label="GitHub"
+                href={siteConfig.social.instagram}
+                aria-label="Instagram"
                 className="text-text-on-dark-secondary transition-premium hover:text-emerald"
               >
-                <GithubIcon width={20} height={20} />
+                <InstagramIcon width={20} height={20} />
+              </a>
+              <a
+                href={siteConfig.social.facebook}
+                aria-label="Facebook"
+                className="text-text-on-dark-secondary transition-premium hover:text-emerald"
+              >
+                <FacebookIcon width={20} height={20} />
               </a>
               <a
                 href={siteConfig.social.twitter}

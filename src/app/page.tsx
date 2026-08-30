@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Quote, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { SectionContainer } from "@/components/ui/SectionContainer";
 import { Eyebrow } from "@/components/ui/Eyebrow";
@@ -38,19 +38,6 @@ const techGroups = [
   { title: "Backend", tags: ["Node.js", "Python", "Go"] },
   { title: "Cloud & DevOps", tags: ["AWS", "Docker", "Kubernetes"] },
   { title: "Data & AI", tags: ["PostgreSQL", "Snowflake", "LLM APIs"] },
-];
-
-const testimonials = [
-  {
-    quote:
-      "They rebuilt our checkout flow in six weeks and it hasn't gone down once since launch.",
-    author: "Head of Engineering, E-commerce Client",
-  },
-  {
-    quote:
-      "The clearest technical communication we've had from any partner we've worked with.",
-    author: "Founder, Fintech Startup",
-  },
 ];
 
 export default function Home() {
@@ -161,22 +148,6 @@ export default function Home() {
             <StatBlock value="100%" label="Projects delivered on the agreed scope and timeline." tone="emerald" />
             <StatBlock value="24/7" label="Monitoring and support for everything we ship." tone="teal" />
           </div>
-        </div>
-      </SectionContainer>
-
-      <SectionContainer background="paper">
-        <h2 className="heading-2 text-center text-ink">What Clients Say</h2>
-        <div className="mt-14 grid grid-cols-1 gap-10 md:grid-cols-2">
-          {testimonials.map((t) => (
-            <div
-              key={t.author}
-              className="rounded-2xl border border-border-on-paper bg-card-on-paper p-10"
-            >
-              <Quote size={28} className="text-emerald" />
-              <p className="mt-6 text-lg leading-relaxed text-ink">&ldquo;{t.quote}&rdquo;</p>
-              <p className="mt-6 text-sm font-semibold text-text-ink-secondary">{t.author}</p>
-            </div>
-          ))}
         </div>
       </SectionContainer>
 
