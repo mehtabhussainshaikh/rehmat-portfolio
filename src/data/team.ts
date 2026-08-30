@@ -24,13 +24,12 @@ export const teamMembers: TeamMember[] = [
   },
   {
     id: 2,
-    name: "Aisha Verma",
-    role: "CTO",
-    image: "/images/team/aisha.svg",
-    bio: "Full-stack developer specializing in cloud architecture and distributed systems.",
+    name: "Jatin Vishwakarma",
+    role: "Founder & Software Developer",
+    image: "https://pub-82f7463d8b074a0c96f61eb289378ccb.r2.dev/jatin.png",
+    bio: "Full-stack engineer with 2+ years of professional experience building production-grade systems using Python, Node.js, React, and cloud platforms. Proven expertise in backend architecture, payment systems, real-time applications, and scalable microservices. Rapidly escalated from intern to Software Engineer with a strong track record in end-to-end delivery and technical leadership.",
     social: {
-      linkedin: "https://linkedin.com/in/aishaverma",
-      github: "https://github.com/aishaverma",
+      github: "https://github.com/jatin7425",
     },
   },
   {
