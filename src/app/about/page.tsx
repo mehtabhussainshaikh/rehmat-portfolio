@@ -110,7 +110,12 @@ export default function AboutPage() {
           {teamMembers.map((member) => (
             <div key={member.id} className="group text-center">
               <div className="relative mx-auto aspect-square w-40 overflow-hidden rounded-full">
-                <Image src={member.image} alt={member.name} fill className="object-cover" />
+                <Image
+                  src={member.image}
+                  alt={member.name}
+                  fill
+                  className="object-cover object-top"
+                />
               </div>
               <h3 className="mt-5 text-lg font-bold text-ink">{member.name}</h3>
               <p className="text-sm font-medium text-emerald-2">{member.role}</p>

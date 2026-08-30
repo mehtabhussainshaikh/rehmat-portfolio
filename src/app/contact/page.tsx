@@ -3,7 +3,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 import { PageTitle } from "@/components/PageTitle";
 import { SectionContainer } from "@/components/ui/SectionContainer";
 import { InquiryForm } from "@/components/InquiryForm";
-import { InstagramIcon, FacebookIcon, TwitterIcon } from "@/components/icons";
+import { InstagramIcon, TwitterIcon } from "@/components/icons";
 import { siteConfig } from "@/data/site-config";
 
 export const metadata: Metadata = {
@@ -52,20 +52,17 @@ export default function ContactPage() {
               <div className="mt-4 flex gap-4">
                 <a
                   href={siteConfig.social.instagram}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Instagram"
                   className="text-text-ink-secondary transition-premium hover:text-ink"
                 >
                   <InstagramIcon width={22} height={22} />
                 </a>
                 <a
-                  href={siteConfig.social.facebook}
-                  aria-label="Facebook"
-                  className="text-text-ink-secondary transition-premium hover:text-ink"
-                >
-                  <FacebookIcon width={22} height={22} />
-                </a>
-                <a
                   href={siteConfig.social.twitter}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   aria-label="Twitter"
                   className="text-text-ink-secondary transition-premium hover:text-ink"
                 >

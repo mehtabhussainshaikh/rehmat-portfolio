@@ -10,7 +10,6 @@ export const siteConfig = {
   address: "Valsad, Gujarat, India",
   social: {
     instagram: "https://www.instagram.com/rehmataitech/",
-    facebook: "https://facebook.com/rehmat",
     twitter: "https://x.com/rehmatai",
   },
   nav: [

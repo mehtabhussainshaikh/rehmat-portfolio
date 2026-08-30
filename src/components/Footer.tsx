@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { InstagramIcon, FacebookIcon, TwitterIcon } from "@/components/icons";
+import { InstagramIcon, TwitterIcon } from "@/components/icons";
 import { siteConfig } from "@/data/site-config";
 
 export function Footer() {
@@ -25,20 +25,17 @@ export function Footer() {
             <div className="mt-6 flex gap-4">
               <a
                 href={siteConfig.social.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Instagram"
                 className="text-text-on-dark-secondary transition-premium hover:text-emerald"
               >
                 <InstagramIcon width={20} height={20} />
               </a>
               <a
-                href={siteConfig.social.facebook}
-                aria-label="Facebook"
-                className="text-text-on-dark-secondary transition-premium hover:text-emerald"
-              >
-                <FacebookIcon width={20} height={20} />
-              </a>
-              <a
                 href={siteConfig.social.twitter}
+                target="_blank"
+                rel="noopener noreferrer"
                 aria-label="Twitter"
                 className="text-text-on-dark-secondary transition-premium hover:text-emerald"
               >
