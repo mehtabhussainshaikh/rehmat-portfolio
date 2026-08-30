@@ -13,13 +13,13 @@ export interface TeamMember {
 export const teamMembers: TeamMember[] = [
   {
     id: 1,
-    name: "Rehmat",
+    name: "Mehtab Shaikh",
     role: "Founder & CEO",
-    image: "/images/team/rehmat.svg",
-    bio: "Software engineer with 5+ years of experience building scalable systems for startups and enterprises.",
+    image: "/images/team/mehtab.svg",
+    bio: "With over three years of experience in software development, I specialize in building reliable, scalable, and user-focused digital solutions. As the founder of the company, I combine technical expertise with a commitment to helping businesses solve real-world problems through modern technology.",
     social: {
-      linkedin: "https://linkedin.com/in/rehmat",
-      github: "https://github.com/rehmat",
+      linkedin: "https://linkedin.com/in/mehtabshaikh",
+      github: "https://github.com/mehtabhussainshaikh",
     },
   },
   {
