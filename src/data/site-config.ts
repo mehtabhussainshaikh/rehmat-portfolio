@@ -17,24 +17,14 @@ export const siteConfig = {
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
-    { label: "Portfolio", href: "/portfolio" },
-    { label: "Blog", href: "/blog" },
     { label: "Contact", href: "/contact" },
   ],
   footerLinks: {
     product: [
       { label: "Services", href: "/services" },
-      { label: "Portfolio", href: "/portfolio" },
       { label: "Contact", href: "/contact" },
     ],
-    company: [
-      { label: "About", href: "/about" },
-      { label: "Blog", href: "/blog" },
-    ],
-    resources: [
-      { label: "Blog", href: "/blog" },
-      { label: "Portfolio", href: "/portfolio" },
-    ],
+    company: [{ label: "About", href: "/about" }],
     legal: [
       { label: "Privacy Policy", href: "/privacy" },
       { label: "Terms of Service", href: "/terms" },

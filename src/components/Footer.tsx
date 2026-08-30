@@ -49,7 +49,6 @@ export function Footer() {
 
           <FooterColumn title="Product" links={siteConfig.footerLinks.product} />
           <FooterColumn title="Company" links={siteConfig.footerLinks.company} />
-          <FooterColumn title="Resources" links={siteConfig.footerLinks.resources} />
           <FooterColumn title="Legal" links={siteConfig.footerLinks.legal} />
         </div>
 

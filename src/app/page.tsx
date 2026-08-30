@@ -168,7 +168,7 @@ export default function Home() {
       </SectionContainer>
 
       <SectionContainer background="paper">
-        <h2 className="heading-2 text-center text-ink">Building Our Portfolio</h2>
+        <h2 className="heading-2 text-center text-ink">What Clients Say</h2>
         <div className="mt-14 grid grid-cols-1 gap-10 md:grid-cols-2">
           {testimonials.map((t) => (
             <div
