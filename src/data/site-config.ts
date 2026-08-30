@@ -4,7 +4,7 @@ export const siteConfig = {
   tagline: "Build Better Software",
   description:
     "Custom software solutions for startups and enterprises. We design, build, and ship scalable products.",
-  url: "https://rehmat-portfolio.vercel.app",
+  url: "https://rehmat-portfolio-alpha.vercel.app",
   email: "hello@rehmat.dev",
   phone: "+1-555-010-2030",
   address: "Valsad, Gujarat, India",
