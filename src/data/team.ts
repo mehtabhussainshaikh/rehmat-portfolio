@@ -32,14 +32,4 @@ export const teamMembers: TeamMember[] = [
       github: "https://github.com/jatin7425",
     },
   },
-  {
-    id: 3,
-    name: "Daniel Cruz",
-    role: "Lead Product Designer",
-    image: "/images/team/daniel.svg",
-    bio: "Product designer focused on clean, accessible interfaces for B2B software.",
-    social: {
-      linkedin: "https://linkedin.com/in/danielcruz",
-    },
-  },
 ];

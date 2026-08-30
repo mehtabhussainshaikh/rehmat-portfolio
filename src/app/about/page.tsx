@@ -106,7 +106,7 @@ export default function AboutPage() {
 
       <SectionContainer background="paper-2">
         <h2 className="heading-2 text-center text-ink">Our Team</h2>
-        <div className="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
+        <div className="mx-auto mt-14 grid max-w-[600px] grid-cols-1 gap-10 sm:grid-cols-2">
           {teamMembers.map((member) => (
             <div key={member.id} className="group text-center">
               <div className="relative mx-auto aspect-square w-40 overflow-hidden rounded-full">
