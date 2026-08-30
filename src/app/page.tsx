@@ -69,9 +69,6 @@ export default function Home() {
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
             <Eyebrow tone="on-dark">Who We Are</Eyebrow>
-            <h2 className="heading-2 mt-4 max-w-[500px] text-text-on-dark">
-              Six services, one accountable team
-            </h2>
           </div>
           <Link href="/services" className="text-sm font-semibold text-emerald hover:underline">
             View all services →
