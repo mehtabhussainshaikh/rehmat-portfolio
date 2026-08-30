@@ -44,7 +44,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${inter.variable} ${jakarta.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-paper text-text-navy">
+      <body className="min-h-full flex flex-col bg-paper text-text-ink">
         <InquiryModalProvider>
           <Header />
           <main className="flex-1">{children}</main>

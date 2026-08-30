@@ -19,12 +19,12 @@ const sizeClasses: Record<ButtonSize, string> = {
 
 const variantClasses: Record<ButtonVariant, string> = {
   primary:
-    "bg-navy text-text-cream font-semibold hover:bg-navy-2 hover:scale-[1.02] hover:shadow-[0_16px_30px_rgba(22,35,58,0.25)]",
+    "bg-ink text-text-on-dark font-semibold hover:bg-ink-2 hover:scale-[1.02] hover:shadow-[0_16px_30px_rgba(14,42,34,0.25)]",
   secondary:
-    "bg-transparent border-2 border-navy text-navy font-semibold hover:bg-navy hover:text-text-cream",
-  tertiary: "bg-transparent text-navy font-semibold hover:underline underline-offset-4",
+    "bg-transparent border-2 border-ink text-ink font-semibold hover:bg-ink hover:text-text-on-dark",
+  tertiary: "bg-transparent text-ink font-semibold hover:underline underline-offset-4",
   inverse:
-    "bg-amber text-navy font-semibold hover:bg-amber-2 hover:scale-[1.02] hover:shadow-[0_16px_30px_rgba(232,165,72,0.3)]",
+    "bg-emerald text-ink font-semibold hover:bg-emerald-2 hover:scale-[1.02] hover:shadow-[0_16px_30px_rgba(16,185,129,0.3)]",
 };
 
 export function PremiumButton({

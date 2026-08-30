@@ -35,9 +35,9 @@ export function Hero({
       >
         <div className="flex flex-col gap-6">
           {eyebrow && <Eyebrow>{eyebrow}</Eyebrow>}
-          <h1 className="heading-1 text-navy">{title}</h1>
+          <h1 className="heading-1 text-ink">{title}</h1>
           {description && (
-            <p className={`max-w-[520px] text-base leading-relaxed text-text-navy-secondary ${isCenter ? "mx-auto" : ""}`}>
+            <p className={`max-w-[520px] text-base leading-relaxed text-text-ink-secondary ${isCenter ? "mx-auto" : ""}`}>
               {description}
             </p>
           )}
@@ -70,7 +70,7 @@ export function Hero({
         <div className="border-t border-border-on-paper">
           <div className="mx-auto flex max-w-[1200px] flex-wrap justify-between gap-6 px-5 py-6 md:px-8 lg:px-10">
             {highlights.map((item) => (
-              <span key={item} className="text-sm font-medium text-text-navy-secondary">
+              <span key={item} className="text-sm font-medium text-text-ink-secondary">
                 {item}
               </span>
             ))}

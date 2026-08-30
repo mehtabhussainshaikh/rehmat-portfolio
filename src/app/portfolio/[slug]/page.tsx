@@ -42,15 +42,15 @@ export default async function PortfolioDetailPage({
 
   return (
     <>
-      <div className="relative aspect-[21/9] w-full overflow-hidden bg-navy-2">
+      <div className="relative aspect-[21/9] w-full overflow-hidden bg-ink-2">
         <Image src={item.image} alt={item.title} fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
       </div>
 
       <SectionContainer background="paper" padding="small">
         <Eyebrow>Case Study</Eyebrow>
-        <h1 className="heading-1 mt-4 max-w-[900px] text-navy">{item.title}</h1>
-        <p className="mt-6 max-w-[700px] text-lg leading-relaxed text-text-navy-secondary">
+        <h1 className="heading-1 mt-4 max-w-[900px] text-ink">{item.title}</h1>
+        <p className="mt-6 max-w-[700px] text-lg leading-relaxed text-text-ink-secondary">
           {item.description}
         </p>
         <div className="mt-6 flex flex-wrap gap-2">
@@ -65,14 +65,14 @@ export default async function PortfolioDetailPage({
       <SectionContainer background="paper-2">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
           <div>
-            <h2 className="heading-3 text-navy">The Problem</h2>
-            <p className="mt-4 text-base leading-relaxed text-text-navy-secondary">
+            <h2 className="heading-3 text-ink">The Problem</h2>
+            <p className="mt-4 text-base leading-relaxed text-text-ink-secondary">
               {item.problem}
             </p>
           </div>
           <div>
-            <h2 className="heading-3 text-navy">The Solution</h2>
-            <p className="mt-4 text-base leading-relaxed text-text-navy-secondary">
+            <h2 className="heading-3 text-ink">The Solution</h2>
+            <p className="mt-4 text-base leading-relaxed text-text-ink-secondary">
               {item.solution}
             </p>
           </div>
@@ -81,23 +81,23 @@ export default async function PortfolioDetailPage({
 
       {item.challenges && (
         <SectionContainer background="paper">
-          <h2 className="heading-3 text-navy">Challenges</h2>
-          <p className="mt-4 max-w-[800px] text-base leading-relaxed text-text-navy-secondary">
+          <h2 className="heading-3 text-ink">Challenges</h2>
+          <p className="mt-4 max-w-[800px] text-base leading-relaxed text-text-ink-secondary">
             {item.challenges}
           </p>
         </SectionContainer>
       )}
 
-      <SectionContainer background="navy">
-        <h2 className="heading-3 text-text-cream">Results</h2>
-        <p className="mt-4 max-w-[800px] text-base leading-relaxed text-text-cream-secondary">
+      <SectionContainer background="ink">
+        <h2 className="heading-3 text-text-on-dark">Results</h2>
+        <p className="mt-4 max-w-[800px] text-base leading-relaxed text-text-on-dark-secondary">
           {item.results}
         </p>
       </SectionContainer>
 
-      <section className="bg-amber px-5 py-20 lg:px-10">
+      <section className="bg-emerald px-5 py-20 lg:px-10">
         <div className="mx-auto flex max-w-[800px] flex-col items-center gap-6 text-center">
-          <h2 className="heading-2 text-navy">Ready to start your project?</h2>
+          <h2 className="heading-2 text-ink">Ready to start your project?</h2>
           <Link href="/contact">
             <PremiumButton size="lg">Get Started</PremiumButton>
           </Link>
@@ -108,13 +108,13 @@ export default async function PortfolioDetailPage({
         <div className="flex flex-col justify-between gap-6 sm:flex-row">
           <Link
             href={`/portfolio/${prev.slug}`}
-            className="flex items-center gap-2 text-sm font-semibold text-text-navy-secondary transition-premium hover:text-navy"
+            className="flex items-center gap-2 text-sm font-semibold text-text-ink-secondary transition-premium hover:text-ink"
           >
             <ArrowLeft size={16} /> {prev.title}
           </Link>
           <Link
             href={`/portfolio/${next.slug}`}
-            className="flex items-center gap-2 text-right text-sm font-semibold text-text-navy-secondary transition-premium hover:text-navy"
+            className="flex items-center gap-2 text-right text-sm font-semibold text-text-ink-secondary transition-premium hover:text-ink"
           >
             {next.title} <ArrowRight size={16} />
           </Link>

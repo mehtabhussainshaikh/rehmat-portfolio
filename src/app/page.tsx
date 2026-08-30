@@ -5,10 +5,8 @@ import { SectionContainer } from "@/components/ui/SectionContainer";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { StatBlock } from "@/components/ui/StatBlock";
 import { NumberedFeatureCard } from "@/components/NumberedFeatureCard";
-import { CaseStudyCard } from "@/components/CaseStudyCard";
 import { StartInquiryButton } from "@/components/StartInquiryButton";
 import { services } from "@/data/services";
-import { portfolioItems } from "@/data/portfolio";
 
 const highlights = ["Fixed or hourly", "Free audit sprint", "Two-week slices", "No lock-in"];
 
@@ -56,8 +54,6 @@ const testimonials = [
 ];
 
 export default function Home() {
-  const featuredPortfolio = portfolioItems.filter((item) => item.featured).slice(0, 3);
-
   return (
     <>
       <Hero
@@ -69,15 +65,15 @@ export default function Home() {
         highlights={highlights}
       />
 
-      <SectionContainer background="navy">
+      <SectionContainer background="ink">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <div>
-            <Eyebrow tone="cream">Who We Are</Eyebrow>
-            <h2 className="heading-2 mt-4 max-w-[500px] text-text-cream">
+            <Eyebrow tone="on-dark">Who We Are</Eyebrow>
+            <h2 className="heading-2 mt-4 max-w-[500px] text-text-on-dark">
               Six services, one accountable team
             </h2>
           </div>
-          <Link href="/services" className="text-sm font-semibold text-amber hover:underline">
+          <Link href="/services" className="text-sm font-semibold text-emerald hover:underline">
             View all services →
           </Link>
         </div>
@@ -96,17 +92,17 @@ export default function Home() {
 
       <SectionContainer background="paper">
         <Eyebrow>Our Engagement Model</Eyebrow>
-        <h2 className="heading-2 mt-4 max-w-[700px] text-navy">
+        <h2 className="heading-2 mt-4 max-w-[700px] text-ink">
           You see working software before you see a big invoice.
         </h2>
         <div className="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {engagementSteps.map((step) => (
             <div key={step.title}>
-              <span className="text-xs font-semibold uppercase tracking-[2px] text-amber-2">
+              <span className="text-xs font-semibold uppercase tracking-[2px] text-emerald-2">
                 {step.label}
               </span>
-              <h3 className="mt-3 text-lg font-bold text-navy">{step.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-text-navy-secondary">
+              <h3 className="mt-3 text-lg font-bold text-ink">{step.title}</h3>
+              <p className="mt-2 text-sm leading-relaxed text-text-ink-secondary">
                 {step.description}
               </p>
             </div>
@@ -118,10 +114,10 @@ export default function Home() {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
           <div>
             <Eyebrow>Expertise</Eyebrow>
-            <h2 className="heading-2 mt-4 text-navy">
+            <h2 className="heading-2 mt-4 text-ink">
               Any tech, chosen for your problem — not our comfort.
             </h2>
-            <p className="mt-6 max-w-[440px] text-base leading-relaxed text-text-navy-secondary">
+            <p className="mt-6 max-w-[440px] text-base leading-relaxed text-text-ink-secondary">
               We pick the stack that fits your team, budget, and timeline — not the one
               we happen to already know.
             </p>
@@ -132,12 +128,12 @@ export default function Home() {
                 key={group.title}
                 className="rounded-2xl border border-border-on-paper bg-card-on-paper p-6"
               >
-                <h3 className="text-sm font-bold text-amber-2">{group.title}</h3>
+                <h3 className="text-sm font-bold text-emerald-2">{group.title}</h3>
                 <div className="mt-3 flex flex-wrap gap-2">
                   {group.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full bg-paper-2 px-3 py-1 text-xs font-medium text-text-navy-secondary"
+                      className="rounded-full bg-paper-2 px-3 py-1 text-xs font-medium text-text-ink-secondary"
                     >
                       {tag}
                     </span>
@@ -149,69 +145,45 @@ export default function Home() {
         </div>
       </SectionContainer>
 
-      <SectionContainer background="navy">
+      <SectionContainer background="ink">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:items-center">
           <div>
-            <Eyebrow tone="cream">Why Us</Eyebrow>
-            <h2 className="heading-2 mt-4 text-text-cream">
+            <Eyebrow tone="on-dark">Why Us</Eyebrow>
+            <h2 className="heading-2 mt-4 text-text-on-dark">
               No legacy to lean on. Just relentless craft.
             </h2>
-            <p className="mt-6 max-w-[440px] text-base leading-relaxed text-text-cream-secondary">
+            <p className="mt-6 max-w-[440px] text-base leading-relaxed text-text-on-dark-secondary">
               We&apos;re a young studio with a senior mindset. Every engineer here has
               shipped and operated production systems — no learning on your dime.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            <StatBlock value="100%" label="Projects delivered on the agreed scope and timeline." tone="amber" />
+            <StatBlock value="100%" label="Projects delivered on the agreed scope and timeline." tone="emerald" />
             <StatBlock value="24/7" label="Monitoring and support for everything we ship." tone="teal" />
           </div>
         </div>
       </SectionContainer>
 
       <SectionContainer background="paper">
-        <h2 className="heading-2 text-center text-navy">Building Our Portfolio</h2>
+        <h2 className="heading-2 text-center text-ink">Building Our Portfolio</h2>
         <div className="mt-14 grid grid-cols-1 gap-10 md:grid-cols-2">
           {testimonials.map((t) => (
             <div
               key={t.author}
               className="rounded-2xl border border-border-on-paper bg-card-on-paper p-10"
             >
-              <Quote size={28} className="text-amber" />
-              <p className="mt-6 text-lg leading-relaxed text-navy">&ldquo;{t.quote}&rdquo;</p>
-              <p className="mt-6 text-sm font-semibold text-text-navy-secondary">{t.author}</p>
+              <Quote size={28} className="text-emerald" />
+              <p className="mt-6 text-lg leading-relaxed text-ink">&ldquo;{t.quote}&rdquo;</p>
+              <p className="mt-6 text-sm font-semibold text-text-ink-secondary">{t.author}</p>
             </div>
           ))}
         </div>
       </SectionContainer>
 
-      <SectionContainer background="paper-2">
-        <div className="flex flex-wrap items-end justify-between gap-4">
-          <div>
-            <Eyebrow>Featured Work</Eyebrow>
-            <h2 className="heading-2 mt-4 text-navy">A few of the products we&apos;ve shipped</h2>
-          </div>
-          <Link href="/portfolio" className="text-sm font-semibold text-navy hover:underline">
-            View all work →
-          </Link>
-        </div>
-        <div className="mt-14 grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
-          {featuredPortfolio.map((item) => (
-            <Link key={item.id} href={`/portfolio/${item.slug}`}>
-              <CaseStudyCard
-                image={item.image}
-                title={item.title}
-                description={item.description}
-                technologies={item.technologies}
-              />
-            </Link>
-          ))}
-        </div>
-      </SectionContainer>
-
-      <section className="bg-amber px-5 py-20 lg:px-10">
+      <section className="bg-emerald px-5 py-20 lg:px-10">
         <div className="mx-auto flex max-w-[800px] flex-col items-center gap-6 text-center">
-          <h2 className="heading-2 text-navy">Let&apos;s build something worth shipping.</h2>
-          <p className="text-base leading-relaxed text-navy/80">
+          <h2 className="heading-2 text-ink">Let&apos;s build something worth shipping.</h2>
+          <p className="text-base leading-relaxed text-ink/80">
             Tell us about your project and we&apos;ll get back to you within one
             business day.
           </p>

@@ -28,7 +28,7 @@ export default function BlogPage() {
             <Link
               key={post.id}
               href={`/blog/${post.slug}`}
-              className="group flex flex-col overflow-hidden rounded-2xl border border-border-on-paper bg-card-on-paper transition-premium hover:-translate-y-1.5 hover:border-amber/40 hover:shadow-[0_20px_36px_rgba(22,35,58,0.1)]"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-border-on-paper bg-card-on-paper transition-premium hover:-translate-y-1.5 hover:border-emerald/40 hover:shadow-[0_20px_36px_rgba(14,42,34,0.1)]"
             >
               <div className="relative aspect-video w-full overflow-hidden">
                 <Image
@@ -42,13 +42,13 @@ export default function BlogPage() {
                 <Badge variant="accent" size="sm" className="w-fit">
                   {post.category}
                 </Badge>
-                <h3 className="text-xl font-bold text-navy">{post.title}</h3>
-                <p className="flex-1 text-sm leading-relaxed text-text-navy-secondary">
+                <h3 className="text-xl font-bold text-ink">{post.title}</h3>
+                <p className="flex-1 text-sm leading-relaxed text-text-ink-secondary">
                   {post.excerpt}
                 </p>
-                <div className="flex items-center justify-between text-xs text-text-navy-secondary">
+                <div className="flex items-center justify-between text-xs text-text-ink-secondary">
                   <span>{formatDate(post.date)}</span>
-                  <span className="font-semibold text-navy">Read More</span>
+                  <span className="font-semibold text-ink">Read More</span>
                 </div>
               </div>
             </Link>

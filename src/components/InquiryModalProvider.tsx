@@ -44,24 +44,24 @@ export function InquiryModalProvider({ children }: { children: ReactNode }) {
 
       {isOpen && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-navy/60 p-4"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-ink/60 p-4"
           onClick={close}
         >
           <div
             className="max-h-[90vh] w-full max-w-lg overflow-y-auto rounded-2xl bg-card-on-paper shadow-2xl"
             onClick={(event) => event.stopPropagation()}
           >
-            <div className="relative bg-amber px-8 py-6">
+            <div className="relative bg-emerald px-8 py-6">
               <button
                 type="button"
                 onClick={close}
                 aria-label="Close"
-                className="absolute right-5 top-5 text-navy/70 transition-premium hover:text-navy"
+                className="absolute right-5 top-5 text-ink/70 transition-premium hover:text-ink"
               >
                 <X size={20} />
               </button>
-              <h2 className="heading-3 text-navy">Start an Inquiry</h2>
-              <p className="mt-2 text-sm leading-relaxed text-navy/80">
+              <h2 className="heading-3 text-ink">Start an Inquiry</h2>
+              <p className="mt-2 text-sm leading-relaxed text-ink/80">
                 Tell us what you&apos;re building. We&apos;ll reply within one business
                 day with a next step.
               </p>

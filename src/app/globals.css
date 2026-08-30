@@ -1,39 +1,39 @@
 @import "tailwindcss";
 
 :root {
-  --paper: #f4ecdc;
-  --paper-2: #ece0c6;
-  --card-on-paper: #fffdf8;
-  --navy: #16233a;
-  --navy-2: #1f3049;
-  --navy-3: #263a56;
-  --amber: #e8a548;
-  --amber-2: #d99a3f;
-  --teal: #2f7f76;
-  --text-navy: #16233a;
-  --text-navy-secondary: #5b6577;
-  --text-cream: #f6f0e2;
-  --text-cream-secondary: #a9b3c4;
-  --border-on-paper: #e2d5b8;
-  --border-on-navy: #2c3d59;
+  --paper: #ffffff;
+  --paper-2: #f2f7f4;
+  --card-on-paper: #ffffff;
+  --ink: #0e2a22;
+  --ink-2: #163d31;
+  --ink-3: #1e4c3d;
+  --emerald: #10b981;
+  --emerald-2: #0d9668;
+  --teal: #0d9488;
+  --text-ink: #101613;
+  --text-ink-secondary: #57645d;
+  --text-on-dark: #f2f8f5;
+  --text-on-dark-secondary: #9fc2b3;
+  --border-on-paper: #e0e8e3;
+  --border-on-ink: #2a4c3f;
 }
 
 @theme inline {
   --color-paper: var(--paper);
   --color-paper-2: var(--paper-2);
   --color-card-on-paper: var(--card-on-paper);
-  --color-navy: var(--navy);
-  --color-navy-2: var(--navy-2);
-  --color-navy-3: var(--navy-3);
-  --color-amber: var(--amber);
-  --color-amber-2: var(--amber-2);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-emerald: var(--emerald);
+  --color-emerald-2: var(--emerald-2);
   --color-teal: var(--teal);
-  --color-text-navy: var(--text-navy);
-  --color-text-navy-secondary: var(--text-navy-secondary);
-  --color-text-cream: var(--text-cream);
-  --color-text-cream-secondary: var(--text-cream-secondary);
+  --color-text-ink: var(--text-ink);
+  --color-text-ink-secondary: var(--text-ink-secondary);
+  --color-text-on-dark: var(--text-on-dark);
+  --color-text-on-dark-secondary: var(--text-on-dark-secondary);
   --color-border-on-paper: var(--border-on-paper);
-  --color-border-on-navy: var(--border-on-navy);
+  --color-border-on-ink: var(--border-on-ink);
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-heading: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
@@ -48,7 +48,7 @@ html {
 
 body {
   background-color: var(--paper);
-  color: var(--text-navy);
+  color: var(--text-ink);
   font-family: var(--font-sans);
 }
 
@@ -82,6 +82,6 @@ body {
 }
 
 ::selection {
-  background-color: var(--amber);
-  color: var(--navy);
+  background-color: var(--emerald);
+  color: var(--ink);
 }

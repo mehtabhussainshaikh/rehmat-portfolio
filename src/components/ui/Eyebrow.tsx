@@ -4,22 +4,22 @@ import { cn } from "@/lib/utils";
 interface EyebrowProps {
   children: ReactNode;
   className?: string;
-  tone?: "amber" | "cream";
+  tone?: "emerald" | "on-dark";
 }
 
-export function Eyebrow({ children, className, tone = "amber" }: EyebrowProps) {
+export function Eyebrow({ children, className, tone = "emerald" }: EyebrowProps) {
   return (
     <span
       className={cn(
         "eyebrow",
-        tone === "amber" ? "text-amber-2" : "text-text-cream-secondary",
+        tone === "emerald" ? "text-emerald-2" : "text-text-on-dark-secondary",
         className
       )}
     >
       <span
         className={cn(
           "h-1.5 w-1.5 rounded-full",
-          tone === "amber" ? "bg-amber" : "bg-text-cream-secondary"
+          tone === "emerald" ? "bg-emerald" : "bg-text-on-dark-secondary"
         )}
       />
       {children}

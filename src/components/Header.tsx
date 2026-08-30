@@ -13,9 +13,9 @@ export function Header() {
     <header className="sticky top-0 z-50 border-b border-border-on-paper bg-paper/95 backdrop-blur">
       <div className="max-w-[1200px] mx-auto flex items-center justify-between px-5 py-4 lg:px-10">
         <Link href="/" className="flex items-center gap-2">
-          <span className="h-2.5 w-2.5 rounded-full bg-amber" />
+          <span className="h-2.5 w-2.5 rounded-full bg-emerald" />
           <span
-            className="text-xl font-bold tracking-tight text-navy"
+            className="text-xl font-bold tracking-tight text-ink"
             style={{ fontFamily: "var(--font-heading)" }}
           >
             {siteConfig.shortName}
@@ -27,7 +27,7 @@ export function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-text-navy-secondary transition-premium hover:text-navy"
+              className="text-sm font-medium text-text-ink-secondary transition-premium hover:text-ink"
             >
               {item.label}
             </Link>
@@ -41,7 +41,7 @@ export function Header() {
         <button
           type="button"
           aria-label="Toggle menu"
-          className="md:hidden text-navy"
+          className="md:hidden text-ink"
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X size={28} /> : <Menu size={28} />}
@@ -55,7 +55,7 @@ export function Header() {
               key={item.href}
               href={item.href}
               onClick={() => setOpen(false)}
-              className="rounded-lg px-3 py-3 text-sm font-medium text-text-navy-secondary transition-premium hover:bg-paper-2 hover:text-navy"
+              className="rounded-lg px-3 py-3 text-sm font-medium text-text-ink-secondary transition-premium hover:bg-paper-2 hover:text-ink"
             >
               {item.label}
             </Link>

@@ -27,52 +27,52 @@ export default function ContactPage() {
 
           <div className="flex flex-col gap-8">
             <div>
-              <h2 className="heading-3 text-navy">Contact Information</h2>
+              <h2 className="heading-3 text-ink">Contact Information</h2>
               <div className="mt-6 flex flex-col gap-5">
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="flex items-center gap-4 text-text-navy-secondary transition-premium hover:text-navy"
+                  className="flex items-center gap-4 text-text-ink-secondary transition-premium hover:text-ink"
                 >
-                  <Mail size={20} className="text-amber-2" />
+                  <Mail size={20} className="text-emerald-2" />
                   {siteConfig.email}
                 </a>
                 <a
                   href={`tel:${siteConfig.phone}`}
-                  className="flex items-center gap-4 text-text-navy-secondary transition-premium hover:text-navy"
+                  className="flex items-center gap-4 text-text-ink-secondary transition-premium hover:text-ink"
                 >
-                  <Phone size={20} className="text-amber-2" />
+                  <Phone size={20} className="text-emerald-2" />
                   {siteConfig.phone}
                 </a>
-                <div className="flex items-center gap-4 text-text-navy-secondary">
-                  <MapPin size={20} className="text-amber-2" />
+                <div className="flex items-center gap-4 text-text-ink-secondary">
+                  <MapPin size={20} className="text-emerald-2" />
                   {siteConfig.address}
                 </div>
               </div>
             </div>
 
             <div>
-              <h3 className="text-sm font-semibold tracking-[0.5px] text-navy">
+              <h3 className="text-sm font-semibold tracking-[0.5px] text-ink">
                 Follow Us
               </h3>
               <div className="mt-4 flex gap-4">
                 <a
                   href={siteConfig.social.linkedin}
                   aria-label="LinkedIn"
-                  className="text-text-navy-secondary transition-premium hover:text-navy"
+                  className="text-text-ink-secondary transition-premium hover:text-ink"
                 >
                   <LinkedinIcon width={22} height={22} />
                 </a>
                 <a
                   href={siteConfig.social.github}
                   aria-label="GitHub"
-                  className="text-text-navy-secondary transition-premium hover:text-navy"
+                  className="text-text-ink-secondary transition-premium hover:text-ink"
                 >
                   <GithubIcon width={22} height={22} />
                 </a>
                 <a
                   href={siteConfig.social.twitter}
                   aria-label="Twitter"
-                  className="text-text-navy-secondary transition-premium hover:text-navy"
+                  className="text-text-ink-secondary transition-premium hover:text-ink"
                 >
                   <TwitterIcon width={22} height={22} />
                 </a>

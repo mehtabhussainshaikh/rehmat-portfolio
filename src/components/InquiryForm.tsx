@@ -49,20 +49,20 @@ export function InquiryForm({
   }
 
   const inputClasses =
-    "w-full rounded-xl border border-border-on-paper bg-card-on-paper px-4 py-3 text-navy placeholder:text-text-navy-secondary transition-premium focus:border-amber focus:outline-none";
+    "w-full rounded-xl border border-border-on-paper bg-card-on-paper px-4 py-3 text-ink placeholder:text-text-ink-secondary transition-premium focus:border-emerald focus:outline-none";
 
   return (
     <form onSubmit={handleSubmit} noValidate className="flex flex-col gap-5">
-      {showHeading && <h2 className="heading-3 text-navy">Send Us a Message</h2>}
+      {showHeading && <h2 className="heading-3 text-ink">Send Us a Message</h2>}
 
       {submitted && (
-        <p className="rounded-xl border border-teal bg-[rgba(47,127,118,0.1)] px-4 py-3 text-sm text-teal">
+        <p className="rounded-xl border border-teal bg-[rgba(13,148,136,0.1)] px-4 py-3 text-sm text-teal">
           Thanks — your inquiry has been received. We&apos;ll be in touch soon.
         </p>
       )}
 
       <div>
-        <label htmlFor="name" className="mb-2 block text-sm font-medium text-navy">
+        <label htmlFor="name" className="mb-2 block text-sm font-medium text-ink">
           Name *
         </label>
         <input id="name" name="name" type="text" className={inputClasses} />
@@ -70,7 +70,7 @@ export function InquiryForm({
       </div>
 
       <div>
-        <label htmlFor="email" className="mb-2 block text-sm font-medium text-navy">
+        <label htmlFor="email" className="mb-2 block text-sm font-medium text-ink">
           Email *
         </label>
         <input id="email" name="email" type="email" className={inputClasses} />
@@ -78,21 +78,21 @@ export function InquiryForm({
       </div>
 
       <div>
-        <label htmlFor="company" className="mb-2 block text-sm font-medium text-navy">
+        <label htmlFor="company" className="mb-2 block text-sm font-medium text-ink">
           Company
         </label>
         <input id="company" name="company" type="text" className={inputClasses} />
       </div>
 
       <div>
-        <label htmlFor="phone" className="mb-2 block text-sm font-medium text-navy">
+        <label htmlFor="phone" className="mb-2 block text-sm font-medium text-ink">
           Phone
         </label>
         <input id="phone" name="phone" type="tel" className={inputClasses} />
       </div>
 
       <div>
-        <label htmlFor="inquiryRegarding" className="mb-2 block text-sm font-medium text-navy">
+        <label htmlFor="inquiryRegarding" className="mb-2 block text-sm font-medium text-ink">
           Inquiry Regarding *
         </label>
         <input
@@ -108,7 +108,7 @@ export function InquiryForm({
       </div>
 
       <div>
-        <label htmlFor="message" className="mb-2 block text-sm font-medium text-navy">
+        <label htmlFor="message" className="mb-2 block text-sm font-medium text-ink">
           Inquiry Details *
         </label>
         <textarea id="message" name="message" rows={5} className={inputClasses} />
