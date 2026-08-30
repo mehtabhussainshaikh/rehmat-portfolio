@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import { SectionContainer } from "@/components/ui/SectionContainer";
 import { Badge } from "@/components/ui/Badge";
+import { Eyebrow } from "@/components/ui/Eyebrow";
 import { PremiumButton } from "@/components/ui/Button";
 import { portfolioItems } from "@/data/portfolio";
 
@@ -41,14 +42,15 @@ export default async function PortfolioDetailPage({
 
   return (
     <>
-      <div className="relative aspect-[21/9] w-full overflow-hidden bg-primary-bg-2">
+      <div className="relative aspect-[21/9] w-full overflow-hidden bg-navy-2">
         <Image src={item.image} alt={item.title} fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary-bg via-primary-bg/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/40 to-transparent" />
       </div>
 
-      <SectionContainer padding="small">
-        <h1 className="heading-1 max-w-[900px] text-primary-text">{item.title}</h1>
-        <p className="mt-6 max-w-[700px] text-lg leading-relaxed text-primary-text-secondary">
+      <SectionContainer background="paper" padding="small">
+        <Eyebrow>Case Study</Eyebrow>
+        <h1 className="heading-1 mt-4 max-w-[900px] text-navy">{item.title}</h1>
+        <p className="mt-6 max-w-[700px] text-lg leading-relaxed text-text-navy-secondary">
           {item.description}
         </p>
         <div className="mt-6 flex flex-wrap gap-2">
@@ -60,17 +62,17 @@ export default async function PortfolioDetailPage({
         </div>
       </SectionContainer>
 
-      <SectionContainer background="secondary">
+      <SectionContainer background="paper-2">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2">
           <div>
-            <h2 className="heading-3 text-primary-text">The Problem</h2>
-            <p className="mt-4 text-base leading-relaxed text-primary-text-secondary">
+            <h2 className="heading-3 text-navy">The Problem</h2>
+            <p className="mt-4 text-base leading-relaxed text-text-navy-secondary">
               {item.problem}
             </p>
           </div>
           <div>
-            <h2 className="heading-3 text-primary-text">The Solution</h2>
-            <p className="mt-4 text-base leading-relaxed text-primary-text-secondary">
+            <h2 className="heading-3 text-navy">The Solution</h2>
+            <p className="mt-4 text-base leading-relaxed text-text-navy-secondary">
               {item.solution}
             </p>
           </div>
@@ -78,41 +80,41 @@ export default async function PortfolioDetailPage({
       </SectionContainer>
 
       {item.challenges && (
-        <SectionContainer>
-          <h2 className="heading-3 text-primary-text">Challenges</h2>
-          <p className="mt-4 max-w-[800px] text-base leading-relaxed text-primary-text-secondary">
+        <SectionContainer background="paper">
+          <h2 className="heading-3 text-navy">Challenges</h2>
+          <p className="mt-4 max-w-[800px] text-base leading-relaxed text-text-navy-secondary">
             {item.challenges}
           </p>
         </SectionContainer>
       )}
 
-      <SectionContainer background="secondary">
-        <h2 className="heading-3 text-primary-text">Results</h2>
-        <p className="mt-4 max-w-[800px] text-base leading-relaxed text-primary-text-secondary">
+      <SectionContainer background="navy">
+        <h2 className="heading-3 text-text-cream">Results</h2>
+        <p className="mt-4 max-w-[800px] text-base leading-relaxed text-text-cream-secondary">
           {item.results}
         </p>
       </SectionContainer>
 
-      <section className="bg-primary-bg-2-hover px-5 py-20 lg:px-10">
+      <section className="bg-amber px-5 py-20 lg:px-10">
         <div className="mx-auto flex max-w-[800px] flex-col items-center gap-6 text-center">
-          <h2 className="heading-2 text-primary-text">Ready to start your project?</h2>
+          <h2 className="heading-2 text-navy">Ready to start your project?</h2>
           <Link href="/contact">
             <PremiumButton size="lg">Get Started</PremiumButton>
           </Link>
         </div>
       </section>
 
-      <SectionContainer padding="small">
+      <SectionContainer background="paper" padding="small">
         <div className="flex flex-col justify-between gap-6 sm:flex-row">
           <Link
             href={`/portfolio/${prev.slug}`}
-            className="flex items-center gap-2 text-sm font-semibold text-primary-text-secondary transition-premium hover:text-primary-accent"
+            className="flex items-center gap-2 text-sm font-semibold text-text-navy-secondary transition-premium hover:text-navy"
           >
             <ArrowLeft size={16} /> {prev.title}
           </Link>
           <Link
             href={`/portfolio/${next.slug}`}
-            className="flex items-center gap-2 text-right text-sm font-semibold text-primary-text-secondary transition-premium hover:text-primary-accent"
+            className="flex items-center gap-2 text-right text-sm font-semibold text-text-navy-secondary transition-premium hover:text-navy"
           >
             {next.title} <ArrowRight size={16} />
           </Link>

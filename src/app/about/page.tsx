@@ -3,6 +3,8 @@ import Image from "next/image";
 import { Heart, Compass, Users, Sparkles, Award, Clock } from "lucide-react";
 import { Hero } from "@/components/Hero";
 import { SectionContainer } from "@/components/ui/SectionContainer";
+import { Eyebrow } from "@/components/ui/Eyebrow";
+import { HeroIllustration } from "@/components/HeroIllustration";
 import { teamMembers } from "@/data/team";
 
 export const metadata: Metadata = {
@@ -55,45 +57,51 @@ export default function AboutPage() {
   return (
     <>
       <Hero
+        eyebrow="Our Story"
         title="About Us"
-        subtitle="Our Story"
         description="We're a small team of engineers who care more about shipping working software than chasing trends."
         layout="center"
       />
 
-      <SectionContainer>
+      <SectionContainer background="paper">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div>
-            <h2 className="heading-2 text-primary-text">Our Story</h2>
-            <p className="mt-6 text-base leading-relaxed text-primary-text-secondary">
+            <Eyebrow>How We Started</Eyebrow>
+            <h2 className="heading-2 mt-4 text-navy">Our Story</h2>
+            <p className="mt-6 text-base leading-relaxed text-text-navy-secondary">
               We started building custom software for startups after seeing too many
               projects stall out on unclear requirements and fragile codebases. Our
               focus has stayed the same since day one: build things that work, explain
               our decisions clearly, and treat every client&apos;s product like our own.
             </p>
           </div>
-          <div className="relative aspect-square w-full overflow-hidden rounded-2xl bg-gradient-to-br from-primary-bg-2 to-primary-bg">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(232,180,79,0.25),transparent_60%)]" />
+          <div className="aspect-square w-full overflow-hidden rounded-2xl">
+            <HeroIllustration />
           </div>
         </div>
       </SectionContainer>
 
-      <SectionContainer background="secondary">
-        <h2 className="heading-2 text-center text-primary-text">Our Mission</h2>
-        <p className="mx-auto mt-6 max-w-[700px] text-center text-base leading-relaxed text-primary-text-secondary">
-          To help ambitious teams ship software that actually holds up in production —
-          reliable, maintainable, and built to scale with the business.
+      <SectionContainer background="navy">
+        <Eyebrow tone="cream">Our Mission</Eyebrow>
+        <h2 className="heading-2 mt-4 text-center text-text-cream">
+          To help ambitious teams ship software that holds up in production.
+        </h2>
+        <p className="mx-auto mt-6 max-w-[700px] text-center text-base leading-relaxed text-text-cream-secondary">
+          Reliable, maintainable, and built to scale with the business — not just the
+          demo.
         </p>
       </SectionContainer>
 
-      <SectionContainer>
-        <h2 className="heading-2 text-center text-primary-text">Core Values</h2>
+      <SectionContainer background="paper">
+        <h2 className="heading-2 text-center text-navy">Core Values</h2>
         <div className="mt-14 grid grid-cols-1 gap-10 md:grid-cols-3">
           {values.map((value) => (
             <div key={value.title} className="text-center">
-              <value.icon size={40} className="mx-auto text-primary-accent" />
-              <h3 className="mt-6 text-xl font-bold text-primary-text">{value.title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-primary-text-secondary">
+              <span className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-[rgba(232,165,72,0.15)]">
+                <value.icon size={28} className="text-amber-2" />
+              </span>
+              <h3 className="mt-6 text-xl font-bold text-navy">{value.title}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-text-navy-secondary">
                 {value.description}
               </p>
             </div>
@@ -101,17 +109,17 @@ export default function AboutPage() {
         </div>
       </SectionContainer>
 
-      <SectionContainer background="secondary">
-        <h2 className="heading-2 text-center text-primary-text">Our Team</h2>
+      <SectionContainer background="paper-2">
+        <h2 className="heading-2 text-center text-navy">Our Team</h2>
         <div className="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-3">
           {teamMembers.map((member) => (
             <div key={member.id} className="group text-center">
               <div className="relative mx-auto aspect-square w-40 overflow-hidden rounded-full">
                 <Image src={member.image} alt={member.name} fill className="object-cover" />
               </div>
-              <h3 className="mt-5 text-lg font-bold text-primary-text">{member.name}</h3>
-              <p className="text-sm font-medium text-primary-accent">{member.role}</p>
-              <p className="mt-3 text-sm leading-relaxed text-primary-text-secondary">
+              <h3 className="mt-5 text-lg font-bold text-navy">{member.name}</h3>
+              <p className="text-sm font-medium text-amber-2">{member.role}</p>
+              <p className="mt-3 text-sm leading-relaxed text-text-navy-secondary">
                 {member.bio}
               </p>
             </div>
@@ -119,15 +127,17 @@ export default function AboutPage() {
         </div>
       </SectionContainer>
 
-      <SectionContainer>
-        <h2 className="heading-2 text-center text-primary-text">Why Choose Us</h2>
+      <SectionContainer background="paper">
+        <h2 className="heading-2 text-center text-navy">Why Choose Us</h2>
         <div className="mt-14 grid grid-cols-1 gap-10 sm:grid-cols-2">
           {reasons.map((reason) => (
             <div key={reason.title} className="flex gap-5">
-              <reason.icon size={32} className="shrink-0 text-primary-accent" />
+              <span className="inline-flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[rgba(47,127,118,0.12)]">
+                <reason.icon size={24} className="text-teal" />
+              </span>
               <div>
-                <h3 className="text-lg font-bold text-primary-text">{reason.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-primary-text-secondary">
+                <h3 className="text-lg font-bold text-navy">{reason.title}</h3>
+                <p className="mt-2 text-sm leading-relaxed text-text-navy-secondary">
                   {reason.description}
                 </p>
               </div>

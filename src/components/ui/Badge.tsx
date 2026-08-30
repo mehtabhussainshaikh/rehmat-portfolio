@@ -12,10 +12,9 @@ interface BadgeProps {
 }
 
 const variantClasses: Record<BadgeVariant, string> = {
-  default:
-    "bg-[rgba(163,173,183,0.1)] border-[#A3ADB7] text-[#A3ADB7]",
-  success: "bg-[rgba(16,185,129,0.1)] border-[#10B981] text-[#10B981]",
-  accent: "bg-[rgba(232,180,79,0.1)] border-[#E8B44F] text-[#E8B44F]",
+  default: "bg-paper-2 border-border-on-paper text-text-navy-secondary",
+  success: "bg-[rgba(47,127,118,0.1)] border-teal text-teal",
+  accent: "bg-[rgba(232,165,72,0.15)] border-amber text-amber-2",
 };
 
 const sizeClasses: Record<BadgeSize, string> = {

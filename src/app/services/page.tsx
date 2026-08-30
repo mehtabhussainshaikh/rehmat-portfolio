@@ -36,30 +36,32 @@ export default function ServicesPage() {
   return (
     <>
       <Hero
+        eyebrow="What We Do"
         title="Services"
-        subtitle="What We Do"
         description="Full-lifecycle software delivery — from architecture to production support."
         layout="center"
       />
 
-      <SectionContainer>
+      <SectionContainer background="paper">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
           {services.map((service) => {
             const Icon = icons[service.icon];
             return (
               <PremiumCard key={service.id} className="flex flex-col gap-6">
-                <Icon size={40} className="text-primary-accent" />
-                <h3 className="heading-3 text-primary-text">{service.title}</h3>
-                <p className="text-base leading-relaxed text-primary-text-secondary">
+                <span className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-[rgba(232,165,72,0.15)]">
+                  <Icon size={24} className="text-amber-2" />
+                </span>
+                <h3 className="heading-3 text-navy">{service.title}</h3>
+                <p className="text-base leading-relaxed text-text-navy-secondary">
                   {service.description}
                 </p>
                 <ul className="flex flex-col gap-2">
                   {service.features.map((feature) => (
                     <li
                       key={feature}
-                      className="flex items-center gap-2 text-sm text-primary-text-secondary"
+                      className="flex items-center gap-2 text-sm text-text-navy-secondary"
                     >
-                      <CheckCircle2 size={16} className="shrink-0 text-primary-accent-2" />
+                      <CheckCircle2 size={16} className="shrink-0 text-teal" />
                       {feature}
                     </li>
                   ))}
@@ -77,10 +79,10 @@ export default function ServicesPage() {
         </div>
       </SectionContainer>
 
-      <section className="bg-primary-bg-2-hover px-5 py-20 lg:px-10">
+      <section className="bg-amber px-5 py-20 lg:px-10">
         <div className="mx-auto flex max-w-[800px] flex-col items-center gap-6 text-center">
-          <h2 className="heading-2 text-primary-text">Start Your Project</h2>
-          <p className="text-base leading-relaxed text-primary-text-secondary">
+          <h2 className="heading-2 text-navy">Start Your Project</h2>
+          <p className="text-base leading-relaxed text-navy/80">
             Tell us what you&apos;re building and we&apos;ll help you scope it.
           </p>
           <Link href="/contact">

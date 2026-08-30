@@ -16,19 +16,19 @@ export default function BlogPage() {
   return (
     <>
       <Hero
+        eyebrow="Insights"
         title="Blog"
-        subtitle="Insights"
         description="Notes from building and shipping production software."
         layout="center"
       />
 
-      <SectionContainer>
+      <SectionContainer background="paper">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-3">
           {blogPosts.map((post) => (
             <Link
               key={post.id}
               href={`/blog/${post.slug}`}
-              className="group flex flex-col overflow-hidden rounded-xl border border-[rgba(232,180,79,0.1)] bg-primary-bg-2 transition-premium hover:-translate-y-2 hover:border-[rgba(232,180,79,0.3)] hover:shadow-[0_20px_40px_rgba(232,180,79,0.15)]"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-border-on-paper bg-card-on-paper transition-premium hover:-translate-y-1.5 hover:border-amber/40 hover:shadow-[0_20px_36px_rgba(22,35,58,0.1)]"
             >
               <div className="relative aspect-video w-full overflow-hidden">
                 <Image
@@ -42,13 +42,13 @@ export default function BlogPage() {
                 <Badge variant="accent" size="sm" className="w-fit">
                   {post.category}
                 </Badge>
-                <h3 className="text-xl font-bold text-primary-text">{post.title}</h3>
-                <p className="flex-1 text-sm leading-relaxed text-primary-text-secondary">
+                <h3 className="text-xl font-bold text-navy">{post.title}</h3>
+                <p className="flex-1 text-sm leading-relaxed text-text-navy-secondary">
                   {post.excerpt}
                 </p>
-                <div className="flex items-center justify-between text-xs text-primary-text-secondary">
+                <div className="flex items-center justify-between text-xs text-text-navy-secondary">
                   <span>{formatDate(post.date)}</span>
-                  <span className="font-semibold text-primary-accent">Read More</span>
+                  <span className="font-semibold text-navy">Read More</span>
                 </div>
               </div>
             </Link>

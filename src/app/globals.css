@@ -1,36 +1,45 @@
 @import "tailwindcss";
 
 :root {
-  --primary-bg: #0d1117;
-  --secondary-bg: #1a202c;
-  --secondary-bg-hover: #232d42;
-  --accent: #e8b44f;
-  --accent-2: #d4a747;
-  --accent-emerald: #10b981;
-  --text-primary: #f5f7fa;
-  --text-secondary: #a3adb7;
-  --border: #2d3748;
+  --paper: #f4ecdc;
+  --paper-2: #ece0c6;
+  --card-on-paper: #fffdf8;
+  --navy: #16233a;
+  --navy-2: #1f3049;
+  --navy-3: #263a56;
+  --amber: #e8a548;
+  --amber-2: #d99a3f;
+  --teal: #2f7f76;
+  --text-navy: #16233a;
+  --text-navy-secondary: #5b6577;
+  --text-cream: #f6f0e2;
+  --text-cream-secondary: #a9b3c4;
+  --border-on-paper: #e2d5b8;
+  --border-on-navy: #2c3d59;
 }
 
 @theme inline {
-  --color-primary-bg: var(--primary-bg);
-  --color-primary-bg-2: var(--secondary-bg);
-  --color-primary-bg-2-hover: var(--secondary-bg-hover);
-  --color-primary-accent: var(--accent);
-  --color-primary-accent-2: var(--accent-emerald);
-  --color-primary-text: var(--text-primary);
-  --color-primary-text-secondary: var(--text-secondary);
-  --color-primary-border: var(--border);
+  --color-paper: var(--paper);
+  --color-paper-2: var(--paper-2);
+  --color-card-on-paper: var(--card-on-paper);
+  --color-navy: var(--navy);
+  --color-navy-2: var(--navy-2);
+  --color-navy-3: var(--navy-3);
+  --color-amber: var(--amber);
+  --color-amber-2: var(--amber-2);
+  --color-teal: var(--teal);
+  --color-text-navy: var(--text-navy);
+  --color-text-navy-secondary: var(--text-navy-secondary);
+  --color-text-cream: var(--text-cream);
+  --color-text-cream-secondary: var(--text-cream-secondary);
+  --color-border-on-paper: var(--border-on-paper);
+  --color-border-on-navy: var(--border-on-navy);
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
-  --font-accent: var(--font-poppins), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
 
   --spacing-section: 120px;
   --spacing-section-sm: 60px;
-
-  --text-h1: 56px;
-  --text-h2: 40px;
-  --text-h3: 28px;
 }
 
 html {
@@ -38,40 +47,41 @@ html {
 }
 
 body {
-  background-color: var(--primary-bg);
-  color: var(--text-primary);
+  background-color: var(--paper);
+  color: var(--text-navy);
   font-family: var(--font-sans);
 }
 
-/* Custom utilities */
 @layer components {
   .section-container {
     @apply max-w-[1200px] mx-auto px-5 py-16 md:px-8 md:py-20 lg:px-10 lg:py-[120px];
   }
 
   .heading-1 {
-    @apply text-[36px] sm:text-[44px] lg:text-[56px] font-bold leading-tight tracking-tight;
+    font-family: var(--font-heading);
+    @apply text-[36px] sm:text-[44px] lg:text-[56px] font-bold leading-[1.1] tracking-tight;
   }
 
   .heading-2 {
-    @apply text-[28px] sm:text-[34px] lg:text-[40px] font-bold leading-tight tracking-tight;
+    font-family: var(--font-heading);
+    @apply text-[28px] sm:text-[34px] lg:text-[40px] font-bold leading-[1.15] tracking-tight;
   }
 
   .heading-3 {
-    @apply text-[22px] sm:text-[26px] lg:text-[28px] font-semibold leading-tight tracking-tight;
+    font-family: var(--font-heading);
+    @apply text-[20px] sm:text-[24px] lg:text-[26px] font-bold leading-tight tracking-tight;
   }
 
-  .text-secondary {
-    color: var(--text-secondary);
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[2px];
   }
 
   .transition-premium {
-    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
-/* Selection color */
 ::selection {
-  background-color: var(--accent);
-  color: var(--primary-bg);
+  background-color: var(--amber);
+  color: var(--navy);
 }
