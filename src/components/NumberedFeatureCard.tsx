@@ -35,7 +35,7 @@ export function NumberedFeatureCard({
       </h3>
       <p className="mt-3 text-sm leading-relaxed text-text-on-dark-secondary">{description}</p>
       {items && items.length > 0 && (
-        <ul className="mt-5 flex flex-col gap-2">
+        <ul className="mt-5 flex flex-col gap-2 border-t border-border-on-ink pt-5">
           {items.map((item) => (
             <li
               key={item}
