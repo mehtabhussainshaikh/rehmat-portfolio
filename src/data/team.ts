@@ -15,7 +15,7 @@ export const teamMembers: TeamMember[] = [
     id: 1,
     name: "Mehtab Shaikh",
     role: "Founder & CEO",
-    image: "/images/team/mehtab.svg",
+    image: "https://pub-82f7463d8b074a0c96f61eb289378ccb.r2.dev/mehtab.jpeg",
     bio: "With over three years of experience in software development, I specialize in building reliable, scalable, and user-focused digital solutions. As the founder of the company, I combine technical expertise with a commitment to helping businesses solve real-world problems through modern technology.",
     social: {
       linkedin: "https://linkedin.com/in/mehtabshaikh",
