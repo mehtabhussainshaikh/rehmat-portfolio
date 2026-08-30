@@ -1,10 +1,10 @@
-"use client";
+import Link, { LinkProps } from "next/link";
+import { AnchorHTMLAttributes } from "react";
+import { buttonClasses, ButtonSize, ButtonVariant } from "@/components/ui/Button";
 
-import { ButtonHTMLAttributes } from "react";
-import { PremiumButton, ButtonSize, ButtonVariant } from "@/components/ui/Button";
-import { useInquiryModal } from "@/components/InquiryModalProvider";
-
-interface StartInquiryButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface StartInquiryButtonProps
+  extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href">,
+    Partial<Pick<LinkProps, "href">> {
   variant?: ButtonVariant;
   size?: ButtonSize;
   className?: string;
@@ -15,24 +15,12 @@ export function StartInquiryButton({
   variant,
   size,
   className,
-  onClick,
+  href = "/contact",
   ...rest
 }: StartInquiryButtonProps) {
-  const { open } = useInquiryModal();
-
   return (
-    <PremiumButton
-      type="button"
-      variant={variant}
-      size={size}
-      className={className}
-      onClick={(event) => {
-        onClick?.(event);
-        open();
-      }}
-      {...rest}
-    >
+    <Link href={href} className={buttonClasses({ variant, size, className })} {...rest}>
       {children ?? "Start an Inquiry"}
-    </PremiumButton>
+    </Link>
   );
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Mail, Phone, MapPin } from "lucide-react";
-import { Hero } from "@/components/Hero";
+import { PageTitle } from "@/components/PageTitle";
 import { SectionContainer } from "@/components/ui/SectionContainer";
 import { InquiryForm } from "@/components/InquiryForm";
 import { LinkedinIcon, GithubIcon, TwitterIcon } from "@/components/icons";
@@ -14,12 +14,7 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   return (
     <>
-      <Hero
-        eyebrow="Contact Us"
-        title="Let's Talk"
-        description="Tell us about your project. We typically respond within one business day."
-        layout="center"
-      />
+      <PageTitle title="Let's Talk" />
 
       <SectionContainer background="paper">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">

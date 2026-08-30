@@ -27,6 +27,23 @@ const variantClasses: Record<ButtonVariant, string> = {
     "bg-emerald text-ink font-semibold hover:bg-emerald-2 hover:scale-[1.02] hover:shadow-[0_16px_30px_rgba(16,185,129,0.3)]",
 };
 
+export function buttonClasses({
+  variant = "primary",
+  size = "md",
+  className,
+}: {
+  variant?: ButtonVariant;
+  size?: ButtonSize;
+  className?: string;
+}) {
+  return cn(
+    "inline-flex items-center justify-center rounded-full tracking-[0.2px] transition-premium",
+    sizeClasses[size],
+    variantClasses[variant],
+    className
+  );
+}
+
 export function PremiumButton({
   variant = "primary",
   size = "md",
@@ -35,15 +52,7 @@ export function PremiumButton({
   ...rest
 }: PremiumButtonProps) {
   return (
-    <button
-      className={cn(
-        "inline-flex items-center justify-center rounded-full tracking-[0.2px] transition-premium",
-        sizeClasses[size],
-        variantClasses[variant],
-        className
-      )}
-      {...rest}
-    >
+    <button className={buttonClasses({ variant, size, className })} {...rest}>
       {children}
     </button>
   );

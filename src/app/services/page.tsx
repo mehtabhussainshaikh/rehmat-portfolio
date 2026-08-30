@@ -10,7 +10,7 @@ import {
   CheckCircle2,
   type LucideIcon,
 } from "lucide-react";
-import { Hero } from "@/components/Hero";
+import { PageTitle } from "@/components/PageTitle";
 import { SectionContainer } from "@/components/ui/SectionContainer";
 import { PremiumCard } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
@@ -35,12 +35,7 @@ const icons: Record<IconName, LucideIcon> = {
 export default function ServicesPage() {
   return (
     <>
-      <Hero
-        eyebrow="What We Do"
-        title="Services"
-        description="Full-lifecycle software delivery — from architecture to production support."
-        layout="center"
-      />
+      <PageTitle title="Services" />
 
       <SectionContainer background="paper">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">

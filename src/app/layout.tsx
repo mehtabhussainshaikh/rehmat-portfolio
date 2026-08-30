@@ -3,7 +3,6 @@ import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
-import { InquiryModalProvider } from "@/components/InquiryModalProvider";
 import { siteConfig } from "@/data/site-config";
 
 const inter = Inter({
@@ -45,11 +44,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${inter.variable} ${jakarta.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col bg-paper text-text-ink">
-        <InquiryModalProvider>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
-        </InquiryModalProvider>
+        <Header />
+        <main className="flex-1">{children}</main>
+        <Footer />
       </body>
     </html>
   );

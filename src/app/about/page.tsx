@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { Heart, Compass, Users, Sparkles, Award, Clock } from "lucide-react";
-import { Hero } from "@/components/Hero";
+import { PageTitle } from "@/components/PageTitle";
 import { SectionContainer } from "@/components/ui/SectionContainer";
 import { Eyebrow } from "@/components/ui/Eyebrow";
 import { HeroIllustration } from "@/components/HeroIllustration";
@@ -56,12 +56,7 @@ const reasons = [
 export default function AboutPage() {
   return (
     <>
-      <Hero
-        eyebrow="Our Story"
-        title="About Us"
-        description="We're a small team of engineers who care more about shipping working software than chasing trends."
-        layout="center"
-      />
+      <PageTitle title="About Us" />
 
       <SectionContainer background="paper">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
