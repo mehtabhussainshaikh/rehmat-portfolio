@@ -21,7 +21,7 @@ export const services: Service[] = [
     icon: "Code",
     title: "Custom Software Development",
     description:
-      "Build scalable, production-grade software tailored to your business needs.",
+      "Design and build secure, maintainable software aligned with your workflows, customers, and growth strategy.",
     technologies: ["Python", "Node.js", "React", "PostgreSQL"],
     features: [
       "Requirement Analysis",
@@ -36,7 +36,7 @@ export const services: Service[] = [
     icon: "Smartphone",
     title: "Web & Mobile Applications",
     description:
-      "Create intuitive, responsive applications for web and mobile platforms.",
+      "Deliver fast, accessible web and mobile experiences backed by reliable application architecture.",
     technologies: ["React", "React Native", "TypeScript", "Firebase"],
     features: [
       "UI/UX Design",
@@ -50,7 +50,7 @@ export const services: Service[] = [
     icon: "Cloud",
     title: "Cloud & DevOps",
     description:
-      "Design resilient cloud infrastructure and automate your delivery pipeline.",
+      "Modernize infrastructure, automate delivery, and improve the reliability and cost efficiency of production systems.",
     technologies: ["AWS", "Docker", "Kubernetes", "Terraform"],
     features: [
       "Infrastructure as Code",
@@ -64,7 +64,7 @@ export const services: Service[] = [
     icon: "Database",
     title: "Data Engineering",
     description:
-      "Build reliable data pipelines and analytics platforms that scale with you.",
+      "Transform operational data into dependable pipelines, governed platforms, and decision-ready insights.",
     technologies: ["Python", "Airflow", "Spark", "Snowflake"],
     features: [
       "Pipeline Design",
@@ -78,7 +78,7 @@ export const services: Service[] = [
     icon: "Shield",
     title: "Security & Compliance",
     description:
-      "Protect your systems and data with security-first engineering practices.",
+      "Reduce technical risk with secure architecture, practical controls, and compliance-ready engineering practices.",
     technologies: ["OAuth2", "SOC 2", "GDPR", "OWASP"],
     features: [
       "Security Audits",
@@ -92,7 +92,7 @@ export const services: Service[] = [
     icon: "LineChart",
     title: "Product Strategy & Consulting",
     description:
-      "Turn ideas into roadmaps with technical strategy that matches your goals.",
+      "Convert business goals into focused product roadmaps, sound architecture decisions, and achievable delivery plans.",
     technologies: ["Roadmapping", "MVP Design", "Tech Audits", "Scaling"],
     features: [
       "Discovery Workshops",

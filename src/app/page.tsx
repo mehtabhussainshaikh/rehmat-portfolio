@@ -8,28 +8,33 @@ import { NumberedFeatureCard } from "@/components/NumberedFeatureCard";
 import { StartInquiryButton } from "@/components/StartInquiryButton";
 import { services } from "@/data/services";
 
-const highlights = ["Fixed or hourly", "Free audit sprint", "Two-week slices", "No lock-in"];
+const highlights = [
+  "Founder with 3+ years of experience",
+  "Founder-led engineering",
+  "Two-week delivery cycles",
+  "No long-term lock-in",
+];
 
 const engagementSteps = [
   {
     label: "Step 01",
-    title: "Free audit sprint",
-    description: "We map your codebase and goals before you spend a dollar on a build.",
+    title: "Technical discovery",
+    description: "We assess your product, codebase, risks, and priorities before recommending a build plan.",
   },
   {
     label: "Step 02",
-    title: "Costed plan",
-    description: "A clear scope, timeline, and price — no open-ended estimates.",
+    title: "Practical delivery plan",
+    description: "You receive a clear scope, architecture direction, milestones, and commercial model.",
   },
   {
     label: "Step 03",
-    title: "Ship in two-week slices",
-    description: "You see working software every sprint, not just at the end.",
+    title: "Deliver in focused cycles",
+    description: "Working software is reviewed every two weeks, keeping progress visible and decisions timely.",
   },
   {
     label: "Step 04",
-    title: "Fixed or hourly — your call",
-    description: "Pick the engagement model that fits how you like to work.",
+    title: "Improve and scale",
+    description: "After launch, we support, monitor, and evolve the product as your business grows.",
   },
 ];
 
@@ -45,8 +50,8 @@ export default function Home() {
     <>
       <Hero
         eyebrow="Software Delivery & Services"
-        title="We build and maintain software, for every piece of tech."
-        description="From the first architecture decision to launch and beyond — a small, senior team that ships production-grade software without the agency overhead."
+        title="Software engineered for growth, reliability, and real-world use."
+        description="Rehmat AI Tech is a newly founded software company led by founder Mehtab Shaikh. We design, build, and support dependable digital products—from the first architecture decision through long-term operation."
         cta={{ label: "Get Started", href: "/contact" }}
         secondaryCta={{ label: "Our Approach", href: "/about" }}
         highlights={highlights}
@@ -58,7 +63,7 @@ export default function Home() {
             <Eyebrow tone="on-dark">Who We Are</Eyebrow>
           </div>
           <Link href="/services" className="text-sm font-semibold text-emerald hover:underline">
-            View all services →
+            Explore our capabilities →
           </Link>
         </div>
         <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -77,7 +82,7 @@ export default function Home() {
       <SectionContainer background="paper">
         <Eyebrow>Our Engagement Model</Eyebrow>
         <h2 className="heading-2 mt-4 max-w-[700px] text-ink">
-          You see working software before you see a big invoice.
+          A transparent delivery model built around working software.
         </h2>
         <div className="mt-14 flex flex-col divide-y divide-border-on-paper md:grid md:grid-cols-4 md:divide-x md:divide-y-0">
           {engagementSteps.map((step) => (
@@ -102,11 +107,11 @@ export default function Home() {
           <div>
             <Eyebrow>Expertise</Eyebrow>
             <h2 className="heading-2 mt-4 text-ink">
-              Any tech, chosen for your problem — not our comfort.
+              The right technology for your product, team, and growth plan.
             </h2>
             <p className="mt-6 max-w-[440px] text-base leading-relaxed text-text-ink-secondary">
-              We pick the stack that fits your team, budget, and timeline — not the one
-              we happen to already know.
+              We choose proven technologies around business requirements, operating
+              constraints, security, and maintainability—not trends or convenience.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -137,26 +142,27 @@ export default function Home() {
           <div>
             <Eyebrow tone="on-dark">Why Us</Eyebrow>
             <h2 className="heading-2 mt-4 text-text-on-dark">
-              No legacy to lean on. Just relentless craft.
+              Hands-on engineering. Accountable delivery. Lasting quality.
             </h2>
             <p className="mt-6 max-w-[440px] text-base leading-relaxed text-text-on-dark-secondary">
-              We&apos;re a young studio with a senior mindset. Every engineer here has
-              shipped and operated production systems — no learning on your dime.
+              Mehtab Shaikh, founder of Rehmat AI Tech, brings more than 3 years of
+              professional software-development experience across product engineering,
+              cloud platforms, data systems, and production support.
             </p>
           </div>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            <StatBlock value="100%" label="Projects delivered on the agreed scope and timeline." tone="emerald" />
-            <StatBlock value="24/7" label="Monitoring and support for everything we ship." tone="teal" />
+            <StatBlock value="3+" label="Years of professional software-development experience from founder Mehtab Shaikh." tone="emerald" />
+            <StatBlock value="24/7" label="Production monitoring and support options for critical systems." tone="teal" />
           </div>
         </div>
       </SectionContainer>
 
       <section className="bg-emerald px-5 py-20 lg:px-10">
         <div className="mx-auto flex max-w-[800px] flex-col items-center gap-6 text-center">
-          <h2 className="heading-2 text-ink">Let&apos;s build something worth shipping.</h2>
+          <h2 className="heading-2 text-ink">Build your next product with confidence.</h2>
           <p className="text-base leading-relaxed text-ink/80">
-            Tell us about your project and we&apos;ll get back to you within one
-            business day.
+            Share your goals, technical challenges, or existing product roadmap. We&apos;ll
+            respond with practical next steps within one business day.
           </p>
           <StartInquiryButton size="lg">
             Start an Inquiry <ArrowRight size={18} className="ml-2" />

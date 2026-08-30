@@ -16,7 +16,7 @@ export const teamMembers: TeamMember[] = [
     name: "Mehtab Shaikh",
     role: "Founder & CEO",
     image: "https://pub-82f7463d8b074a0c96f61eb289378ccb.r2.dev/mehtab.jpeg",
-    bio: "With over three years of experience in software development, I specialize in building reliable, scalable, and user-focused digital solutions. As the founder of the company, I combine technical expertise with a commitment to helping businesses solve real-world problems through modern technology.",
+    bio: "Software engineer and technology leader focused on turning business challenges into reliable, scalable digital products. Mehtab leads product strategy, technical direction, and client partnerships with an emphasis on clear communication and long-term value.",
     social: {
       linkedin: "https://linkedin.com/in/mehtabshaikh",
       github: "https://github.com/mehtabhussainshaikh",
@@ -25,9 +25,9 @@ export const teamMembers: TeamMember[] = [
   {
     id: 2,
     name: "Jatin Vishwakarma",
-    role: "Founder & Software Developer",
+    role: "Co-Founder & Software Engineer",
     image: "https://pub-82f7463d8b074a0c96f61eb289378ccb.r2.dev/jatin.png",
-    bio: "Full-stack engineer with 2+ years of professional experience building production-grade systems using Python, Node.js, React, and cloud platforms. Proven expertise in backend architecture, payment systems, real-time applications, and scalable microservices. Rapidly escalated from intern to Software Engineer with a strong track record in end-to-end delivery and technical leadership.",
+    bio: "Full-stack engineer experienced in backend architecture, payment platforms, real-time applications, and scalable cloud services. Jatin works across Python, Node.js, React, and modern infrastructure to deliver dependable systems from architecture through production.",
     social: {
       github: "https://github.com/jatin7425",
     },

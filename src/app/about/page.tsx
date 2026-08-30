@@ -4,52 +4,52 @@ import { Heart, Compass, Users, Sparkles, Award, Clock } from "lucide-react";
 import { PageTitle } from "@/components/PageTitle";
 import { SectionContainer } from "@/components/ui/SectionContainer";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { HeroIllustration } from "@/components/HeroIllustration";
 import { teamMembers } from "@/data/team";
 
 export const metadata: Metadata = {
   title: "About",
-  description: "Our story, mission, values, and the team behind the work.",
+  description:
+    "Meet the people behind Rehmat AI Tech, a newly founded software company led by founder Mehtab Shaikh, who brings 3+ years of professional development experience.",
 };
 
 const values = [
   {
     icon: Heart,
     title: "Craftsmanship",
-    description: "We care about the details users never see but always feel.",
+    description: "We engineer dependable systems with care for performance, security, and maintainability.",
   },
   {
     icon: Compass,
     title: "Honesty",
-    description: "We tell clients what's true, not just what's easy to hear.",
+    description: "We communicate trade-offs clearly and recommend what serves the product best.",
   },
   {
     icon: Users,
     title: "Partnership",
-    description: "We work as an extension of your team, not an outside vendor.",
+    description: "We work alongside your team, share ownership, and stay accountable for outcomes.",
   },
 ];
 
 const reasons = [
   {
     icon: Sparkles,
-    title: "Senior engineers only",
-    description: "Every project is built by experienced engineers, not junior hires.",
+    title: "Founder-led engineering",
+    description: "Every project receives direct technical involvement, clear ownership, and hands-on production experience.",
   },
   {
     icon: Award,
     title: "Production-grade quality",
-    description: "We ship code we'd be comfortable running our own business on.",
+    description: "Architecture, testing, security, and observability are treated as core delivery work.",
   },
   {
     icon: Clock,
     title: "Predictable delivery",
-    description: "Clear milestones and weekly updates, no surprises at the deadline.",
+    description: "Clear milestones, frequent demonstrations, and proactive communication keep delivery visible.",
   },
   {
     icon: Compass,
     title: "Strategic thinking",
-    description: "We push back on scope that doesn't serve the actual goal.",
+    description: "We connect technical decisions to customer value, operating cost, and long-term growth.",
   },
 ];
 
@@ -64,14 +64,21 @@ export default function AboutPage() {
             <Eyebrow>How We Started</Eyebrow>
             <h2 className="heading-2 mt-4 text-ink">Our Story</h2>
             <p className="mt-6 text-base leading-relaxed text-text-ink-secondary">
-              We started building custom software for startups after seeing too many
-              projects stall out on unclear requirements and fragile codebases. Our
-              focus has stayed the same since day one: build things that work, explain
-              our decisions clearly, and treat every client&apos;s product like our own.
+              Rehmat AI Tech is a newly founded software company created to give growing
+              businesses direct access to practical, dependable engineering support.
+              Mehtab Shaikh founded the company after more than 3 years of professional
+              software-development experience, with a focus on turning complex ideas and
+              fragile systems into secure, maintainable products ready for real users.
             </p>
           </div>
-          <div className="aspect-square w-full overflow-hidden rounded-2xl">
-            <HeroIllustration />
+          <div className="relative aspect-square w-full overflow-hidden rounded-2xl">
+            <Image
+              src="/images/technology-consulting-team.webp"
+              alt="Technology consultants reviewing a software delivery roadmap"
+              fill
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
           </div>
         </div>
       </SectionContainer>
@@ -79,11 +86,11 @@ export default function AboutPage() {
       <SectionContainer background="ink">
         <Eyebrow tone="on-dark">Our Mission</Eyebrow>
         <h2 className="heading-2 mt-4 text-center text-text-on-dark">
-          To help ambitious teams ship software that holds up in production.
+          To turn ambitious ideas into dependable software that creates lasting business value.
         </h2>
         <p className="mx-auto mt-6 max-w-[700px] text-center text-base leading-relaxed text-text-on-dark-secondary">
-          Reliable, maintainable, and built to scale with the business — not just the
-          demo.
+          We combine product thinking, disciplined engineering, and operational ownership
+          to deliver systems that remain reliable well beyond launch.
         </p>
       </SectionContainer>
 

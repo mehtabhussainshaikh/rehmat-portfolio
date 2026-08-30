@@ -1,7 +1,6 @@
-import Link from "next/link";
-import { PremiumButton } from "@/components/ui/Button";
+import Image from "next/image";
 import { Eyebrow } from "@/components/ui/Eyebrow";
-import { HeroIllustration } from "@/components/HeroIllustration";
+import { StartInquiryButton } from "@/components/StartInquiryButton";
 
 export interface HeroProps {
   eyebrow?: string;
@@ -44,24 +43,33 @@ export function Hero({
           {(cta || secondaryCta) && (
             <div className={`flex flex-wrap gap-4 ${isCenter ? "justify-center" : ""}`}>
               {cta && (
-                <Link href={cta.href}>
-                  <PremiumButton size="lg">{cta.label}</PremiumButton>
-                </Link>
+                <StartInquiryButton href={cta.href} size="lg">
+                  {cta.label}
+                </StartInquiryButton>
               )}
               {secondaryCta && (
-                <Link href={secondaryCta.href}>
-                  <PremiumButton variant="secondary" size="lg">
-                    {secondaryCta.label}
-                  </PremiumButton>
-                </Link>
+                <StartInquiryButton
+                  href={secondaryCta.href}
+                  variant="secondary"
+                  size="lg"
+                >
+                  {secondaryCta.label}
+                </StartInquiryButton>
               )}
             </div>
           )}
         </div>
 
         {!isCenter && (
-          <div className="aspect-[560/460] w-full overflow-hidden rounded-2xl">
-            <HeroIllustration />
+          <div className="relative aspect-[560/460] w-full overflow-hidden rounded-2xl">
+            <Image
+              src="/images/software-engineering-team.webp"
+              alt="Software engineers collaborating on a production system"
+              fill
+              priority
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              className="object-cover"
+            />
           </div>
         )}
       </div>

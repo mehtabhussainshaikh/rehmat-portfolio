@@ -5,6 +5,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { siteConfig } from "@/data/site-config";
 import { StartInquiryButton } from "@/components/StartInquiryButton";
+import { BrandLogo } from "@/components/BrandLogo";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -12,14 +13,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-border-on-paper bg-paper/95 backdrop-blur">
       <div className="max-w-[1200px] mx-auto flex items-center justify-between px-5 py-4 lg:px-10">
-        <Link href="/" className="flex items-center gap-2">
-          <span className="h-2.5 w-2.5 rounded-full bg-emerald" />
-          <span
-            className="text-xl font-bold tracking-tight text-ink"
-            style={{ fontFamily: "var(--font-heading)" }}
-          >
-            {siteConfig.shortName}
-          </span>
+        <Link href="/" aria-label={`${siteConfig.shortName} home`}>
+          <BrandLogo priority />
         </Link>
 
         <nav className="hidden md:flex items-center gap-10">

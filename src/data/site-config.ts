@@ -1,9 +1,9 @@
 export const siteConfig = {
-  name: "Rehmat",
-  shortName: "Rehmat",
-  tagline: "Build Better Software",
+  name: "Rehmat AI Tech",
+  shortName: "Rehmat AI Tech",
+  tagline: "Engineering Software That Lasts",
   description:
-    "Custom software solutions for startups and enterprises. We design, build, and ship scalable products.",
+    "Rehmat AI Tech is a newly founded software company building secure, scalable digital products under the leadership of founder Mehtab Shaikh, who brings 3+ years of professional development experience.",
   url: "https://rehmat-portfolio-alpha.vercel.app",
   email: "hello@rehmat.dev",
   phone: "+1-555-010-2030",

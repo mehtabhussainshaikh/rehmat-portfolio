@@ -8,13 +8,13 @@ import { siteConfig } from "@/data/site-config";
 
 export const metadata: Metadata = {
   title: "Contact",
-  description: "Get in touch to discuss your project.",
+  description: "Speak directly with the Rehmat AI Tech engineering team about your product, platform, or technology roadmap.",
 };
 
 export default function ContactPage() {
   return (
     <>
-      <PageTitle title="Let's Talk" />
+      <PageTitle title="Let's Build What's Next" />
 
       <SectionContainer background="paper">
         <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">

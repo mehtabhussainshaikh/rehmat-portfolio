@@ -1,38 +1,64 @@
-# Rehmat
+# Rehmat Portfolio
 
-A production-ready, spacious marketing site built with Next.js (App Router), TypeScript, and Tailwind CSS. Fully static — no backend, database, or API calls; all content lives in `src/data/*.ts`.
+The public marketing website for Rehmat, built as a fully static Next.js site.
 
 ## Stack
 
-- Next.js 16 (App Router) with static export (`output: "export"`)
-- TypeScript
-- Tailwind CSS v4
-- lucide-react icons
+- Next.js 16 App Router
+- React 19 and TypeScript
+- Tailwind CSS 4
+- Lucide React icons
+- Static export to `out/`
 
-## Getting Started
+## Local development
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open <http://localhost:3000>.
 
-## Build
+## Validation and build
 
 ```bash
+npm run lint
 npm run build
 ```
 
-Generates a static site in `/out`, ready to deploy to Vercel, Netlify, GitHub Pages, or any static host.
+The production build is written to `out/` and can be deployed to any static host.
 
-## Project Structure
+## Current routes
 
-- `src/app` — routes (home, about, services, portfolio, blog, contact, privacy, terms)
-- `src/components` — shared UI (Header, Footer, Hero, ServiceCard, CaseStudyCard) and `ui/` primitives (Button, Card, Badge, SectionContainer)
-- `src/data` — site content (`site-config`, `services`, `portfolio`, `blog`, `team`)
-- `src/lib` — small utilities
+- `/` — homepage
+- `/about` — story, values, and team
+- `/services` — service catalogue
+- `/contact` — contact details and inquiry form
+- `/privacy` — privacy policy
+- `/terms` — terms of service
 
-## Content
+`robots.txt` and `sitemap.xml` are generated from route metadata.
 
-Edit the files in `src/data` to update copy, services, portfolio case studies, blog posts, and team members. Replace the placeholder SVGs in `public/images` with real photography/screenshots when available.
+## Project structure
+
+```text
+src/
+├── app/             Routes, metadata, global styles, sitemap, and robots
+├── components/      Shared site components
+│   └── ui/          Generic visual primitives
+├── data/            Typed site configuration and content
+└── lib/             Small framework-independent utilities
+```
+
+See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for boundaries and extension
+guidance. AI coding agents should also read [AGENTS.md](AGENTS.md) before making
+changes.
+
+## Editing content
+
+- Company details, navigation, and social links: `src/data/site-config.ts`
+- Services: `src/data/services.ts`
+- Team profiles: `src/data/team.ts`
+
+The inquiry form currently performs browser-side validation only. It needs an
+external form endpoint or a server runtime before it can deliver submissions.

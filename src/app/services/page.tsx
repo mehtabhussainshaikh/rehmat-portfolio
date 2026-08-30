@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import {
   Code,
   Smartphone,
@@ -14,13 +13,13 @@ import { PageTitle } from "@/components/PageTitle";
 import { SectionContainer } from "@/components/ui/SectionContainer";
 import { PremiumCard } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
-import { PremiumButton } from "@/components/ui/Button";
+import { StartInquiryButton } from "@/components/StartInquiryButton";
 import { services, type IconName } from "@/data/services";
 
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Custom software development, web & mobile applications, cloud infrastructure, data engineering, security, and product strategy.",
+    "Hands-on engineering expertise across custom software, web and mobile products, cloud infrastructure, data platforms, security, and product strategy.",
 };
 
 const icons: Record<IconName, LucideIcon> = {
@@ -76,13 +75,12 @@ export default function ServicesPage() {
 
       <section className="bg-emerald px-5 py-20 lg:px-10">
         <div className="mx-auto flex max-w-[800px] flex-col items-center gap-6 text-center">
-          <h2 className="heading-2 text-ink">Start Your Project</h2>
+          <h2 className="heading-2 text-ink">Turn your roadmap into reliable software.</h2>
           <p className="text-base leading-relaxed text-ink/80">
-            Tell us what you&apos;re building and we&apos;ll help you scope it.
+            Tell us what you&apos;re building, improving, or scaling. We&apos;ll help define
+            the most practical path from your current position to production.
           </p>
-          <Link href="/contact">
-            <PremiumButton size="lg">Start Your Project</PremiumButton>
-          </Link>
+          <StartInquiryButton size="lg">Start Your Project</StartInquiryButton>
         </div>
       </section>
     </>

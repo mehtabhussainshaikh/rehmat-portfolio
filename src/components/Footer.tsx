@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { InstagramIcon, TwitterIcon } from "@/components/icons";
 import { siteConfig } from "@/data/site-config";
+import { BrandLogo } from "@/components/BrandLogo";
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -10,14 +11,8 @@ export function Footer() {
       <div className="max-w-[1200px] mx-auto px-5 py-16 lg:px-10 lg:py-20">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-5">
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2">
-              <span className="h-2.5 w-2.5 rounded-full bg-emerald" />
-              <span
-                className="text-xl font-bold tracking-tight text-text-on-dark"
-                style={{ fontFamily: "var(--font-heading)" }}
-              >
-                {siteConfig.shortName}
-              </span>
+            <Link href="/" aria-label={`${siteConfig.shortName} home`}>
+              <BrandLogo tone="dark" />
             </Link>
             <p className="mt-4 max-w-[320px] text-sm leading-relaxed text-text-on-dark-secondary">
               {siteConfig.description}
